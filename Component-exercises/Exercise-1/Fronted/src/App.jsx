@@ -3,11 +3,41 @@ import {ProfileCard} from './Components/ProfileCard';
 import {UserCard} from './Components/UserCard';
 import {UserInfo} from './Components/UserInfo';
 import {Avatar} from './Components/Avatar';
+import {ProductCard} from './Components/ProductCard';
+import img2 from './assets/img-2.jpg';
+import img1 from './assets/img-1.jpg';
+import img3 from './assets/samsung-s25-ultra.jpg'
 function App(){
+  const buttonText = "buy now";
+  const product1 = {
+    title:"iphone-15",
+    image:img1,
+    brand:"iphone",
+    button:buttonText,
+    price:40000
+  }
+  const product2 = {
+    title:"iphone-16",
+    image:img2,
+    brand:"iphone",
+    button:buttonText,
+    price:20000
+  }
+  const product3 = {
+    title:"Samsung s25 ultra",
+    image:img3,
+    brand:"Samsung",
+    button:buttonText,
+    price:20000
+  }
   return(
     <>
     <ProfileCard  />
+
     <UserCard avatar = "data:image/jpeg;base64,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" name = "Divyanshu Jain"   role = "Photographer" city = "Jaipur" />
+    <ProductCard product = {product1}  />
+    <ProductCard product = {product2}/>
+    <ProductCard product = {product3} />
     </>
   )
 }
