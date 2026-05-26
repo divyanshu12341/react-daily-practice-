@@ -5,7 +5,7 @@ const ProductQuantitySelector = ({OrderItem})=>{
     return(
         <>
         <div className = "container">
-    <button onClick = {()=>setQuantity(Quantity+1)}>+</button>
+    <button onClick = {()=>setQuantity(Quantity+1)} className = "plusBtn">+</button>
     {OrderItem} -- {Quantity}
     <button onClick = {()=>Quantity>=1?setQuantity(Quantity-1):setQuantity(Quantity)}>-</button>
        </div>
